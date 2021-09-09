@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<devices>
+
+    <id>1</id>
+    <name>AMD Ryzen 5 5600 X</name>
+    <origin>China</origin>
+    <price>100</price>
+    <type>
+        <perifiral>false</perifiral>
+        <energyconsumption>76</energyconsumption>
+        <cooler>true</cooler>
+        <groupofcomponents>processor</groupofcomponents>
+        <ports>socket</ports>
+    </type>
+    <critical>true</critical>
+
+    <id>2</id>
+    <name>NVIDIA GT 1660</name>
+    <origin>Vietnam</origin>
+    <price>500</price>
+    <type>
+        <perifiral>false</perifiral>
+        <energyconsumption>100</energyconsumption>
+        <cooler>true</cooler>
+        <groupofcomponents>iodevices</groupofcomponents>
+        <ports>com</ports>
+    </type>
+    <critical>true</critical>
+
+    <id>3</id>
+    <name>Razer keyboard</name>
+    <origin>India</origin>
+    <price>10</price>
+    <type>
+        <perifiral>true</perifiral>
+        <energyconsumption>1</energyconsumption>
+        <cooler>false</cooler>
+        <groupofcomponents>iodevices</groupofcomponents>
+        <ports>usb</ports>
+    </type>
+    <critical>false</critical>
+
+</devices>

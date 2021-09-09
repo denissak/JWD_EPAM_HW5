@@ -1,0 +1,56 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sx="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="devices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="devices" type="device" maxOccurs="unbounded" minOccurs="0">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="device">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="origin" type="xs:string"/>
+            <xs:element name="price" type="xs:float"/>
+            <sx:element name = "type" type = "type"/>
+            <sx:element name = "critical" type = "xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="type">
+        <xs:sequence>
+            <xs:element name="periferal" type="xs:boolean"/>
+            <xs:element name="energyconsumption" type="xs:integer"/>
+            <xs:element name="cooler" type="xs:boolean"/>
+            <xs:element name="groupofcomponent" type="groupofcomponent"/>
+            <xs:element name="port" type="port"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="groupofcomponent">
+        <xs:restriction base ="xs:string">
+            <xs:enumeration value="iodevices"/>
+            <xs:enumeration value="multimedium"/>
+            <xs:enumeration value="processor"/>
+            <xs:enumeration value="motherboard"/>
+            <xs:enumeration value="harddisk"/>
+            <xs:enumeration value="ram"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="port">
+        <xs:restriction base ="xs:string">
+            <xs:enumeration value="com"/>
+            <xs:enumeration value="usb"/>
+            <xs:enumeration value="lpt"/>
+            <xs:enumeration value="socket"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
